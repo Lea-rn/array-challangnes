@@ -292,10 +292,10 @@
 // console.log(max(arr2));
 
 //// second method ::
-const arr2 = [6, 4, 111, 3, 11];
-const arr3 = arr2.sort((a, b) => a - b)[arr2.length - 1];
-// const result = arr3[arr3.length - 1];
-console.log(arr3);
+// const arr2 = [6, 4, 111, 3, 11];
+// const arr3 = arr2.sort((a, b) => a - b)[arr2.length - 1];
+// // const result = arr3[arr3.length - 1];
+// console.log(arr3);
 
 ////////////////
 // const arr2 = [0, 8, 6, 10, 7, 11, 13];
@@ -307,10 +307,47 @@ console.log(arr3);
 
 // const numbers = [1, 10, 2, 10, 5, 6, 10, 100, 6];
 
+// function countElement(arr, value) {
+//   let count = 0;
+//   arr.forEach((ele) => {
+//     if (ele === value) {
+//       count++;
+//     }
+//   });
+//   return `${value} exist ${count} times`;
+// }
+
+// console.log(countElement(numbers, 6544));
+
 // Filter Negative Numbers:
 // Use forEach  to remove all negative numbers from an array.
 
+// const num = [10, 50, -30, 80, 90, -200, 66, -90, 0];
+// console.log(num);
 ////// put your answer here ...........
+// function positiveNumber(arr) {
+//   let positive = [];
+//   arr.forEach((number) => {
+//     if (number >= 0) {
+//       positive.push(number);
+//     }
+//   });
+
+//   return positive;
+// }
+
+// function positiveNumber(arr) {
+//   let positive = [];
+//   arr.forEach(function (number) {
+//     if (number >= 0) {
+//       positive.push(number);
+//     }
+//   });
+
+//   return positive;
+// }
+
+// console.log(positiveNumber(num));
 
 ////////////////////
 
@@ -318,20 +355,68 @@ console.log(arr3);
 // Use concat and forEach to flatten an array of arrays (e.g., [[1, 2], [3, 4]] into [1, 2, 3, 4]).
 ////////////////////////////////
 
-// const arrFlatten = [[1,2,3] , [10,20,30] , [50,60,100]] ; ///// [1,2,3,10,20,30,50,60,100] ;
+// const arrFlatten = [
+//   [1, 2, 3],
+//   [10, 20, 30],
+//   [50, 60, 100],
+// ];///===> ///// [1,2,3,10,20,30,50,60,100] ;
+// console.log(arrFlatten);
+
+// function flatten(arr) {
+
+//   let flat = [];
+//   arr.forEach((smallarray) => (flat = flat.concat(smallarray)));
+//   return flat;
+// }
+
+// console.log(flatten(arrFlatten));
 
 // Advanced Problems:://////////////////////////////////////////////////////////////////////////////
 
 // Remove Duplicates from an Array:
 // Use forEach and includes to remove duplicates from an array.
 ////// put your answer here ...........
+// const numbers = [10, 50, 10, 60, 50, 200, 300, 60, 400];
+// console.log(numbers);
 
+// function removeDuplicates(arr) {
+//   let withoutDoubles = [];
+//   arr.forEach((ele) => {
+
+//     if (!withoutDoubles.includes(ele)) {
+//       withoutDoubles.push(ele);
+//     }
+//   });
+//   return withoutDoubles;
+// }
+// console.log(removeDuplicates(numbers));
 //////////////////////////////////
 
 // Create a New Array Without Specific Elements:
 // Write a function that removes all occurrences of a specific value from an array using forEach and splice.
 ////// put your answer here ...........
+// const numbers = [10, 50, 10, 60, 50, 200, 300, 60, 400];
+// console.log(numbers);
+// function removeElement(arr, value) {
+//   arr.forEach((ele, i) => {
+//     if (ele === value) {
+//       arr.splice(i, 1);
+//     }
+//   });
+//   return arr;
+// }
+
+// console.log(removeElement(numbers, 10));
 
 // Sort an Array in Descending Order:
 // Create a function that sorts an array in descending order using reverse and the sort method. /
 ////// put your answer here ...........
+
+const numbers = [1, 5, -10, -60, 100, 300, 80];
+console.log(numbers);
+function descinding(arr) {
+  const result = arr.sort((a, b) => a - b).reverse();
+  return result;
+}
+
+console.log(descinding(numbers));
